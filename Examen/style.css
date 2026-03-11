@@ -1,0 +1,135 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #070707;
+  --card-bg: #141414;
+  --border: #2a2a2a;
+  --text: #ece8df;
+  --muted: #666;
+}
+
+/* BASE */
+body {
+  background: var(--card-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* HEADING */
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  color: var(--text);
+  letter-spacing: 0.06em;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* LIST */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: 540px;
+  list-style: none;
+}
+
+/* ITEM CARD */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.item:not(:last-child) {
+  border-bottom: none;
+}
+
+.item:first-child {
+  border-radius: 16px 16px 0 0;
+}
+
+.item:last-child {
+  border-radius: 0 0 16px 16px;
+}
+
+/* ICON */
+.icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--accent-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-wrap svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--accent);
+}
+
+/* TEXT INFO */
+.info {
+  flex: 1;
+}
+
+.name {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.handle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+/* Flecha  */
+.arrow {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+/* COLORS  */
+.item-instagram {
+  --accent: #e1306c;
+  --accent-dim: rgba(225, 48, 108, 0.1);
+}
+
+.item-x {
+  --accent: #1d9bf0;
+  --accent-dim: rgba(29, 155, 240, 0.1);
+}
+
+.item-youtube {
+  --accent: #ff0000;
+  --accent-dim: rgba(255, 0, 0, 0.1);
+}
+
